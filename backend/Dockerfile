@@ -3,7 +3,7 @@ FROM eclipse-temurin:17-jdk-alpine AS build
 WORKDIR /app
 COPY . .
 RUN chmod +x ./mvnw
-RUN ./mvnw clean package -DskipTests
+RUN ./mvnw clean package -DskipTests --batch-mode
 
 # Stage 2: Run the application
 FROM eclipse-temurin:17-jdk-alpine
