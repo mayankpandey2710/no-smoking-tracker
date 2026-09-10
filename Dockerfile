@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY backend/ .
 
-RUN mvn clean package -DskipTests
+RUN java -version && mvn -version && mvn clean package -DskipTests
 
 FROM eclipse-temurin:17-jdk-alpine
 
